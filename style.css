@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    margin: 50px auto;
+    overflow: hidden;
+    
+}
+
+#block{
+    width: 70px;
+    height: 100%;
+    background: url('./truba.png');
+
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+
+#hole{
+    width: 70px;
+    height: 150px;
+    position: relative;
+    top: -160px;
+    /* background: url('./bg.png'); */
+    /* background-size: 600%; */
+    /* background-position:  center; */
+    background-color: white;
+    animation: block 2s infinite linear;
+}
+
+#hole:before, #hole:after{
+    content: '';
+    background: url('./kolpak.png');
+    background-size: 100%;
+    width: 85px;
+    height: 40px;
+    position: absolute;
+    top: -35px;
+    z-index: 50;
+    /* border: 1px solid black; */
+}
+
+#hole:after{
+    top: auto;
+    bottom: -35px;
+}
+
+#character{
+    width: 50px;
+    height: 50px;
+    background: url('./bird.png');
+    background-size: 150%;
+    background-position: center;
+    position: absolute;
+    /* border: 1px solid black; */
+    top: 200px;
+    left: 15px;
+}
+
+@keyframes block {
+    0%{
+        left: 400px;
+    }
+    100%{
+        left: -50px;
+    }
+}
