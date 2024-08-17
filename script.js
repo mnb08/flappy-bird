@@ -17,6 +17,10 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
+document.addEventListener('click', (e) => {
+    jump()
+})
+
 setInterval( () => {
     const characterTop = 
         parseInt(window.getComputedStyle(character).getPropertyValue('top'))
